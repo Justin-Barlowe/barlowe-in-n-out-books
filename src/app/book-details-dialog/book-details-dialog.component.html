@@ -1,0 +1,20 @@
+<!-- Name: Justin Barlowe
+File: book-details-dialog.component.html
+Description: HTML for the book details dialog component.
+Date: 11/16/2023
+-->
+
+<mat-card>
+  <!-- Increased font size and aligned center for better viewing -->
+  <mat-card-title class="blue" style="text-align: center; font-size: 30px;">{{ book.title }}</mat-card-title>
+  <mat-card-content>
+    <div fxLayout="column" style="font-size: 20px;">
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Number of Pages: {{ book.numOfPages }}</p>
+      <p>Authors: {{ book.authors.join(', ') }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+  </mat-card-actions>
+</mat-card>
